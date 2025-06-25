@@ -32,7 +32,7 @@
         <p>Of <mylink onclick="copy()">klik hier</mylink> om de tekst te kopiëren.</p>
         <script>
             async function copy() {
-                let fileText = await fetch("../cijferberekenen.py").text()
+                let fileText = await fetch("cijferberekenen.py").text()
                 navigator.clipboard.writeText(fileText)
             }
         </script>
