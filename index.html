@@ -29,5 +29,12 @@
         <p>Deze code heb ik gemaakt om mijn cijfers te berekenen, als ik weet hoeveel punten ik heb.
             <a href="https://github.com/polewolf/Python/raw/refs/heads/main/cijferberekenen.zip" id="downloadlink">Klik hier</a> om het bestand te downloaden als .zip
         </p>
+        <p>Of <mylink onclick="copy()">klik hier</mylink> om de tekst te kopiëren.</p>
+        <script>
+            async function copy() {
+                let fileText = await fetch("../cijferberekenen.py").text()
+                navigator.clipboard.writeText(fileText)
+            }
+        </script>
     </div>
 </body>
