@@ -1,38 +1,51 @@
 <!DOCTYPE html>
+
 <head>
     <title>Python</title>
     <link rel="icon" type="image/x-icon" href="https://github.com/polewolf/Python/raw/refs/heads/main/Python.ico">
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-    body{
-        background-color: #112;
-        text-align: center;
-    }
-    h1{
-        color: #bababa;
-        font-family: Roboto;
-        font-size: 250%;
-        background-color: black;
-    }
-    #cijfer{
-        color:#bababa;
-    }
-    #dowloadlink{
-        color: #113;
-    }
-</style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+        body {
+            background-color: #112;
+            text-align: center;
+        }
+
+        h1 {
+            color: #bababa;
+            font-family: Roboto;
+            font-size: 250%;
+            background-color: black;
+        }
+
+        #cijfer {
+            color: #bababa;
+        }
+
+        #dowloadlink {
+            color: #113;
+        }
+
+        mylink {
+            color: -webkit-link;
+            text-decoration: underline;
+        }
+    </style>
 </head>
+
 <body>
     <h1 id="h1">Mijn python projecten</h1>
     <div id="cijfer">
         <h3>Cijfer Berekenen</h3>
         <p>Deze code heb ik gemaakt om mijn cijfers te berekenen, als ik weet hoeveel punten ik heb.
-            <a href="https://github.com/polewolf/Python/raw/refs/heads/main/cijferberekenen.zip" id="downloadlink">Klik hier</a> om het bestand te downloaden als .zip
+            <a href="https://github.com/polewolf/Python/raw/refs/heads/main/cijferberekenen.zip" id="downloadlink">Klik
+                hier</a> om het bestand te downloaden als .zip
         </p>
         <p>Of <mylink onclick="copy()">klik hier</mylink> om de tekst te kopiëren.</p>
         <script>
             async function copy() {
-                let fileText = await fetch("cijferberekenen.py").text()
+                let file = await fetch("cijferberekenen.py")
+                let fileText = await file.text()
                 navigator.clipboard.writeText(fileText)
             }
         </script>
